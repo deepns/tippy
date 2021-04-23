@@ -32,8 +32,8 @@ Should the content support markdown?
         {
             "description" : "",
             "tags": [],
-            "content" : [],
-            "hidden" : false
+            "contents" : [],
+            "enabled" : true
         }
     ]
 }
@@ -54,16 +54,28 @@ If `tags` is empty, show any tag.
 
 - Pick a random tip
 - Pick a random tip in the chosen tag
-- number of tips to show?
+- number of tips to show? - determined by the config file
 - config file -> save the tag type, number of tips to show, path to tip file
 - cache file -> save the last shown time stamp?
 - spaced repetition? (may be for future)
 - timestamp
-    - creation
-    - last shown
+  - creation
+  - last shown
 - flag to show or hide (useful for tip that is well known, so it doesn't repeat)
 - two separate db // may be read all json in a given path
-    - personal
-    - work
+  - personal
+  - work
 
 ## Tasks
+
+- [ ] Find how a python project is organized
+- [ ] Add outline of work to do
+- [ ] config file name pre-determined.
+- [ ] Define the output format
+- [x] a quick poc
+- [ ] Start with dicts..then add custom classes
+- [ ] Add UTs
+- [ ] Add entries to db
+- [ ] Things to read
+  - [ ] [Real-Python JSON encoding/decoding](https://realpython.com/python-json/)
+- [ ] JSON schema

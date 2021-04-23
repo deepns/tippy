@@ -1,0 +1,17 @@
+{
+    "tips" : [
+        {
+            "description": "Download compressed data and uncompress with CURL",
+            "tags": [
+                "linux",
+                "commands",
+                "curl"
+            ],
+            "enabled": true,
+            "contents" : [
+                "Add `--compressed` option to curl to auto decompress data after download.",
+                "e.g. curl --compressed https://api.stackexchange.com/2.2/sites"
+            ]
+        }
+    ]
+}
