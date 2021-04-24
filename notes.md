@@ -73,7 +73,7 @@ If `tags` is empty, show any tag.
 - [ ] config file name pre-determined.
 - [ ] Define the output format
 - [x] a quick poc
-- [ ] Start with dicts..then add custom classes
+- [x] Start with dicts..then add custom classes // dict seem to good enough. keeping it simple.
 - [ ] Add UTs
 - [ ] Add entries to db
 - [ ] Things to read

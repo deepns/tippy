@@ -1,51 +1,61 @@
 #! /usr/bin/env python3
 
-# Define the class
-#   load from json
-#   convert to json
-#   define __str__
-
 import json
 import random
+import os
 
 CONFIG_FILE = "config.json"
 
-def get_config():
-    with open(CONFIG_FILE) as fp:
+def get_config(config_file:str) -> dict:
+    '''
+    Read the config data from the given file and return a
+    dict.
+    '''
+    with open(config_file) as fp:
         config = json.load(fp)
         return config
 
-def show_tip(tip):
-    # header and footer can also go in config file?
-    header = "================= TIP TO REMEMBER====================="
-    footer = "======================================================"
-    print(header)
-    for line in tip["contents"]:
-        print(line)
-    print(footer)
+def get_tips(config) -> list:
+    '''
+    Returns a list of tips by reading from the files
+    specified in the config file and filtering them
+    by the tags specified.
+    '''
 
-def load_tips(config):
-    config = get_config()
-    tags_to_show = set(config["show_tags"])
+    db_files = config["db_files"]
+    tags_to_show = set(config["tags"])
+    count = config["count"]
 
     tips = []
     
-    for db_file in config["db_files"]:
+    def by_tags(tip):
+        # Filter tips by tag if tag is specified in config file
+        return (not tags_to_show 
+                or tags_to_show.intersection(set(tip["tags"])))
+
+    for db_file in db_files:
         with open(db_file) as fp:
             db = json.load(fp)
-            tips += [
-                        tip
-                        for tip in db["tips"]
-                            if not tags_to_show 
-                                or tags_to_show.intersection(set(tip["tags"]))
-                    ]
+            tips += list(filter(by_tags, db["tips"]))
+
+    return random.choices(tips, k=count)
+
+def show_tip(tip):
+    '''
+    Prints the contents of the given tip
+    '''
+    header = "\n= = = = = = = = = A TIP TO REMEMBER = = = = = = = = =\n"
+    print(header)
+    for line in tip["contents"]:
+        print(line)
+    footer = "\n= = = = = = = = = = = = = = = = = = = = = = = = = = =\n"
+    print(footer)
 
 def main():
-    tips = load_tips()
-    if tips:
-        show_tip(random.choice(tips))
-    else:
-        print("No tip show. You are all set.")
-    
+    config = get_config(CONFIG_FILE)
+    tips = get_tips(config)
+    for tip in tips:
+        show_tip(tip)
+
 if __name__ == "__main__":
     main()

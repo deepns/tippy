@@ -1,9 +1,9 @@
 {
-    "tip_count": 1,
+    "count": 1,
     "db_files": [
         "tips.json"
     ],
-    "show_tags": [
+    "tags": [
         "linux"
     ]
 }
