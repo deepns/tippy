@@ -4,6 +4,7 @@
         "tips.json"
     ],
     "tags": [
-        "linux"
+        "linux",
+        "python"
     ]
 }
