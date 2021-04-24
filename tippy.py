@@ -70,11 +70,11 @@ def show_tip(tip):
     footer = "\n= = = = = = = = = = = = = = = = = = = = = = = = = = =\n"
     print(footer)
 
-def main():
-    config = get_config(CONFIG_FILE)
-    tips = get_tips(config)
-    for tip in tips:
-        show_tip(tip)
+# def main():
+#     config = get_config(CONFIG_FILE)
+#     tips = get_tips(config)
+#     for tip in tips:
+#         show_tip(tip)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
