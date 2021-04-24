@@ -70,12 +70,13 @@ If `tags` is empty, show any tag.
 
 - [ ] Find how a python project is organized
 - [ ] Add outline of work to do
-- [ ] config file name pre-determined.
+- [x] config file name pre-determined // yes. config.json for now. can provide in arg later if needed.
 - [ ] Define the output format
 - [x] a quick poc
 - [x] Start with dicts..then add custom classes // dict seem to good enough. keeping it simple.
-- [ ] Add UTs
+- [ ] Add UTs // working on it.
 - [ ] Add entries to db
 - [ ] Things to read
   - [ ] [Real-Python JSON encoding/decoding](https://realpython.com/python-json/)
 - [ ] JSON schema
+- [ ] Tags comparison should be case insensitive
