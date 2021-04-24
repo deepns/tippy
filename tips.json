@@ -22,7 +22,8 @@
             "enabled": true,
             "contents" : [
                 "Use tempfile.NamedTemporaryFile() callable to have a temporary file with a visible name",
-                "By default, file is opened in binary mode and is deleted on closing.",
+                "By default, file is opened in binary mode and is deleted on closing",
+                "Use \"w+\" to open in text mode.",
                 "Also works with context manager.",
                 ">>> with tempfile.NamedTemporaryFile() as fp:",
                 "...     fp.write(b'Hello world!')",
