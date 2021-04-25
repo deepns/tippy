@@ -1,7 +1,15 @@
 import json
 import tempfile
-import tippy
+import os
 import unittest
+
+# This is ugly. Any alternative not to change the paths,
+# but still use the dev version instead of the installed
+# version?
+os.chdir(os.path.join(os.path.dirname(__file__), "../src/"))
+os.sys.path.insert(0, os.getcwd())
+
+from tippy import tippy
 
 class TestTippy(unittest.TestCase):
     def setUp(self):
@@ -26,6 +34,7 @@ class TestTippy(unittest.TestCase):
         return super().tearDown()
 
     def test_get_tips_by_tags(self):
+        print(dir(tippy), "list dirs of tippy")
         test_config = {
             "count": 1,
             "tags": [
