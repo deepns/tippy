@@ -32,6 +32,19 @@
                 "b'Hello world!'"
             ]
 
+        },
+        {
+            "description":"Python: Get home directory",
+            "tags": [
+                "programming",
+                "python"
+            ],
+            "enabled":true,
+            "contents":[
+                "Class method pathlib.Path.home() returns a new path object",
+                "representing user home directory (similar to os.path.expanduser(\"~\")",
+                "Path object also supports / operator, so Path.home()/subdir/file is also possible"
+            ]
         }
     ]
 }
