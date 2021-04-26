@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+from tippy import tippy
+from pathlib import Path
+
+DEFAULT_CONFIG = Path.home() / '.tippy_config.json'
+
+config = tippy.get_config(DEFAULT_CONFIG)
+tips = tippy.get_tips(config)
+for tip in tips:
+    tippy.show_tip(tip)
