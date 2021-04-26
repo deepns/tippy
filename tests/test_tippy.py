@@ -121,6 +121,37 @@ class TestTippy(unittest.TestCase):
             }
             tips = tippy.get_tips(test_config)
             self.assertListEqual(tips, [], "expected: [], actual:{}".format(tips))
+    
+    def test_get_tags_in_mixed_case(self):
+        self.test_data["tips"].append({
+            "description": "tip-with-case-sensitive-tags",
+            "tags": [
+                "Grep",
+            ],
+            "enabled": True,
+            "contents" : [
+                "test case sensitive tip"
+            ]
+        })
+
+        
+        with tempfile.NamedTemporaryFile("w+") as tfp:
+            json.dump(self.test_data, tfp)
+            tfp.flush()
+
+            test_config = {
+                "count": 1,
+                "db_files": [
+                    tfp.name
+                ],
+                "tags": [
+                    "grep"
+                ]
+            }
+            tips = tippy.get_tips(test_config)
+            self.assertEqual(len(tips), test_config["count"])
+            self.assertListEqual(tips[0]["tags"], self.test_data["tips"][1]["tags"])
+
     def test_get_config_valid(self):
         test_config = {
             "count": 1,

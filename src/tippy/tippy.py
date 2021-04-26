@@ -36,7 +36,7 @@ def get_tips(config) -> list:
     validate_config_keys(config)
 
     db_files = config["db_files"]
-    tags_to_show = set(config["tags"])
+    tags_to_show = {tag.lower() for tag in config["tags"]}
     count = config["count"]
 
     tips = []
@@ -47,7 +47,7 @@ def get_tips(config) -> list:
         return (
             tip["enabled"] and
             (not tags_to_show or
-            tags_to_show.intersection(set(tip["tags"])))
+            tags_to_show.intersection({tag.lower() for tag in tip["tags"]}))
             )
 
     for db_file in db_files:
