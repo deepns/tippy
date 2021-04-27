@@ -151,6 +151,36 @@ class TestTippy(unittest.TestCase):
             tips = tippy.get_tips(test_config)
             self.assertEqual(len(tips), test_config["count"])
             self.assertListEqual(tips[0]["tags"], self.test_data["tips"][1]["tags"])
+    
+    def test_get_tags_without_enabled_flag(self):
+        self.test_data["tips"].append({
+            "description": "tip-without-enabled-flag",
+            "tags": [
+                "test",
+            ],
+            "contents" : [
+                "contents of tip without enabled flag"
+            ]
+        })
+
+        test_config = {
+            "count": 1,
+            "tags": [
+                "test"
+            ]
+        }
+
+        with tempfile.NamedTemporaryFile("w+") as tfp:
+            json.dump(self.test_data, tfp)
+            tfp.flush()
+
+            test_config["db_files"] = [
+                tfp.name
+            ]
+
+            tips = tippy.get_tips(test_config)
+            self.assertEqual(len(tips), test_config["count"])
+            self.assertEqual(tips[0]["description"], self.test_data["tips"][-1]["description"])
 
     def test_get_config_valid(self):
         test_config = {

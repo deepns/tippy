@@ -68,7 +68,7 @@ If `tags` is empty, show any tag.
 
 ## Tasks
 
-- [ ] Find how a python project is organized
+- [x] Find how a python project is organized // in progress.
 - [x] Add outline of work to do
 - [x] config file name pre-determined // yes. config.json for now. can provide in arg later if needed.
 - [x] Define the output format
@@ -81,3 +81,5 @@ If `tags` is empty, show any tag.
   - [ ] [Packaging](https://python-packaging.readthedocs.io/en/latest/everything.html)
 - [x] JSON schema
 - [x] Tags comparison should be case insensitive
+- [ ] Add travis CI support
+- [x] Make "enabled" flag optional

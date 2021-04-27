@@ -45,7 +45,7 @@ def get_tips(config) -> list:
         # Filter tips by tag if tip is enabled and matching
         # tags are specified in config file
         return (
-            tip["enabled"] and
+            tip.get("enabled", True) and
             (not tags_to_show or
             tags_to_show.intersection({tag.lower() for tag in tip["tags"]}))
             )
