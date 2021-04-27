@@ -34,7 +34,6 @@ class TestTippy(unittest.TestCase):
         return super().tearDown()
 
     def test_get_tips_by_tags(self):
-        print(dir(tippy), "list dirs of tippy")
         test_config = {
             "count": 1,
             "tags": [
