@@ -45,6 +45,69 @@
                 "representing user home directory (similar to os.path.expanduser(\"~\")",
                 "Path object also supports / operator, so Path.home()/subdir/file is also possible"
             ]
+        },
+        {
+            "description": "Find which shell I am in",
+            "tags": [
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "Run \"echo $SHELL\" ",
+                "root@88a325681e8c:/# echo $SHELL",
+                "/bin/bash"
+            ]
+        },
+        {
+            "description": "Find system information from command line",
+            "tags": [
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "uname, uname -a",
+                "root@88a325681e8c:/# uname -a",
+                "Linux 88a325681e8c 4.9.184-linuxkit #1 SMP Tue Jul 2 22:58:16 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux",
+                ""
+            ]
+        },
+        {
+            "description": "Find disk usage of directory and files with \"du\"",
+            "tags": [
+                "linux",
+                "shell",
+                "tools"
+            ],
+            "contents":[
+                "du -a - display an entry for each file in the directory",
+                "du -c - display a grand total",
+                "du -h - display info in human readable form (take optional unit suffixes (-m for MB, -g for GB))",
+                "du -d <depth> - stop at given depth level"
+            ]
+        },
+        {
+            "description": "Access last executed command in shell",
+            "tags": [
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "Use \"!!\" to access the last ran command",
+                "du -c - display a grand total",
+                "du -h - display info in human readable form (take optional unit suffixes (-m for MB, -g for GB))",
+                "du -d <depth> - stop at given depth level"
+            ]
+        },
+        {
+            "description": "List with color",
+            "tags": [
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "ls --color=always (on most Linux)",
+                "ls -G (on macOS)"
+            ]
         }
     ]
 }
