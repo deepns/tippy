@@ -81,5 +81,6 @@ If `tags` is empty, show any tag.
   - [ ] [Packaging](https://python-packaging.readthedocs.io/en/latest/everything.html)
 - [x] JSON schema
 - [x] Tags comparison should be case insensitive
-- [ ] Add travis CI support
+- [x] Add travis CI support
 - [x] Make "enabled" flag optional
+- [ ] Add description to the printed output
