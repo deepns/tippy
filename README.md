@@ -10,6 +10,14 @@
 
 Just getting started with the tool. Planning to add more features to the tool, package and the additional tips going forward.
 
+## Install
+
+// TBD
+
+## Run
+
+// In Progress
+
 ```text
 ~ % tippy
 
