@@ -1,6 +1,7 @@
 {
     "count": 1,
-    "db_files": [
+    "is_package_config": true,
+    "data_files": [
         "tips.json"
     ],
     "tags": [

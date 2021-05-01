@@ -3,13 +3,12 @@
 import json
 import random
 import os
-
-CONFIG_FILE = "config.json"
+from pathlib import Path
 
 def validate_config_keys(config:dict):
     required_keys = {
             "count",
-            "db_files",
+            "data_files",
             "tags"
     }
     missing_keys = required_keys - set(config.keys())
@@ -35,7 +34,7 @@ def get_tips(config) -> list:
     # Make sure we have all the keys
     validate_config_keys(config)
 
-    db_files = config["db_files"]
+    data_files = config["data_files"]
     tags_to_show = {tag.lower() for tag in config["tags"]}
     count = config["count"]
 
@@ -50,8 +49,16 @@ def get_tips(config) -> list:
             tags_to_show.intersection({tag.lower() for tag in tip["tags"]}))
             )
 
-    for db_file in db_files:
-        with open(db_file) as fp:
+    # TODO
+    # Add a parameter to config file ("default_config")
+    # when default_config is True
+    #   use the package config and db files
+    # 
+    module_dir = Path(__file__).parent
+    for data_file in data_files:
+        if config.get("is_package_config", False):
+            data_file = module_dir / data_file
+        with open(data_file) as fp:
             db = json.load(fp)
             tips += list(filter(by_tags, db["tips"]))
     try:

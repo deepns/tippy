@@ -3,11 +3,9 @@
 from tippy import tippy
 from pathlib import Path
 
-# Can I use the config.json included in the package?
-# this gets installed in the bin/ of the appropriate
-# python version. How do I get reliable access to the
-# config file from there?
-DEFAULT_CONFIG = Path.home() / '.tippy_config.json'
+# Use the config and data files included in the package by default.
+# An option to use different config files will be added in future.
+DEFAULT_CONFIG = Path(tippy.__file__).parent / 'config.json'
 
 config = tippy.get_config(DEFAULT_CONFIG)
 tips = tippy.get_tips(config)

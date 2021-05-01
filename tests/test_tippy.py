@@ -41,12 +41,12 @@ class TestTippy(unittest.TestCase):
             ]
         }
 
-        with tempfile.NamedTemporaryFile("w+") as test_db_file:
+        with tempfile.NamedTemporaryFile("w+") as test_data_file:
             # Write the test tips into a file
-            json.dump(self.test_data, test_db_file)
-            test_db_file.flush()
+            json.dump(self.test_data, test_data_file)
+            test_data_file.flush()
             
-            test_config["db_files"] = [test_db_file.name]
+            test_config["data_files"] = [test_data_file.name]
 
             tips = tippy.get_tips(test_config)
             self.assertIsNotNone(tips)
@@ -98,7 +98,7 @@ class TestTippy(unittest.TestCase):
             json.dump(self.test_data, tfp)
             tfp.flush()
 
-            test_config["db_files"] = [tfp.name]
+            test_config["data_files"] = [tfp.name]
 
             tips = tippy.get_tips(test_config)
             self.assertEqual(len(tips), test_config["count"], "expected {} tips".format(test_config["count"]))
@@ -111,7 +111,7 @@ class TestTippy(unittest.TestCase):
 
             test_config = {
                 "count": 1,
-                "db_files": [
+                "data_files": [
                     tfp.name
                 ],
                 "tags": [
@@ -140,7 +140,7 @@ class TestTippy(unittest.TestCase):
 
             test_config = {
                 "count": 1,
-                "db_files": [
+                "data_files": [
                     tfp.name
                 ],
                 "tags": [
@@ -173,7 +173,7 @@ class TestTippy(unittest.TestCase):
             json.dump(self.test_data, tfp)
             tfp.flush()
 
-            test_config["db_files"] = [
+            test_config["data_files"] = [
                 tfp.name
             ]
 
@@ -184,7 +184,7 @@ class TestTippy(unittest.TestCase):
     def test_get_config_valid(self):
         test_config = {
             "count": 1,
-            "db_files": [
+            "data_files": [
                 "test.json"
             ],
             "tags": [
