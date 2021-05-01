@@ -83,4 +83,5 @@ If `tags` is empty, show any tag.
 - [x] Tags comparison should be case insensitive
 - [x] Add travis CI support
 - [x] Make "enabled" flag optional
-- [ ] Add description to the printed output
+- [x] Add description to the printed output
+- [ ] Colorize the output. Keep it optional.

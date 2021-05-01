@@ -99,7 +99,7 @@
             ]
         },
         {
-            "description": "List with color",
+            "description": "Colorize ls output",
             "tags": [
                 "linux",
                 "shell"

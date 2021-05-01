@@ -72,6 +72,7 @@ def show_tip(tip):
     '''
     header = "\n= = = = = = = = = A TIP TO REMEMBER = = = = = = = = =\n"
     print(header)
+    print("*> {}\n".format(tip.get("description", "")))
     for line in tip["contents"]:
         print(line)
     footer = "\n= = = = = = = = = = = = = = = = = = = = = = = = = = =\n"
