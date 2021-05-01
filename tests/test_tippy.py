@@ -1,13 +1,13 @@
 import json
 import tempfile
 import os
+from pathlib import Path
 import unittest
 
-# This is ugly. Any alternative not to change the paths,
-# but still use the dev version instead of the installed
-# version?
-os.chdir(os.path.join(os.path.dirname(__file__), "../src/"))
-os.sys.path.insert(0, os.getcwd())
+# Add src/ to path, so we can import the dev
+# packages instead of the site packages
+src_path = Path(__file__).parent.parent / "src"
+os.sys.path.insert(0, str(src_path.resolve()))
 
 from tippy import tippy
 
