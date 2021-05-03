@@ -92,10 +92,30 @@
                 "shell"
             ],
             "contents":[
-                "Use \"!!\" to access the last ran command",
-                "du -c - display a grand total",
-                "du -h - display info in human readable form (take optional unit suffixes (-m for MB, -g for GB))",
-                "du -d <depth> - stop at given depth level"
+                "Use \"!!\" to access the last ran command"
+            ]
+        },
+        {
+            "description": "Get status of last command/process",
+            "tags": [
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "$? - return the status of the last command ran in shell"
+            ]
+        },
+        {
+            "description":"Access arguments from last command",
+            "tags":[
+                "linux",
+                "programming",
+                "shell"
+            ],
+            "contents":[
+                "!^ - First argument",
+                "!$ - Last argument",
+                "!* - All arguments"
             ]
         },
         {
@@ -107,6 +127,19 @@
             "contents":[
                 "ls --color=always (on most Linux)",
                 "ls -G (on macOS)"
+            ]
+        },
+        {
+            "description": "List files with their disk usage",
+            "tags":[
+                "shell",
+                "linux"
+            ],
+            "contents":[
+                "$ ls -lash",
+                "Shows a **long** listing of **all** files along with their ",
+                "**actual file size in number of blocks** (typically 512 bytes) and ",
+                "file size in **human readable** form (e.g B for bytes, K for kilobytes, G for gigabytes etc)"
             ]
         },
         {

@@ -85,3 +85,4 @@ If `tags` is empty, show any tag.
 - [x] Make "enabled" flag optional
 - [x] Add description to the printed output
 - [ ] Colorize the output. Keep it optional.
+- [ ] Add virtual environment and validation of the binary
