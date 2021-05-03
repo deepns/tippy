@@ -108,6 +108,87 @@
                 "ls --color=always (on most Linux)",
                 "ls -G (on macOS)"
             ]
+        },
+        {
+            "description":"Supress newline character in shell",
+            "tags": [
+                "shell",
+                "linux"
+            ],
+            "contents":[
+                "`echo -n` - skips the trailing newline character",
+                "Note: some shells do not support -n option.",
+                "For portability, use printf instead."
+            ]
+        },
+        {
+            "description":"Sort lines in shell",
+            "tags":[
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "sort - command to sort lines of text or binary data from standard input or a file descriptor.",
+                "Default order: lexicographic",
+                "-k <column number> - sort by a specific key",
+                "-n - sort numerically",
+                "-s - keep the sorting order stable"
+            ]
+        },
+        {
+            "description":"Generate sequence of numbers",
+            "tags":[
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "seq - Generate sequence of numbers",
+                "starts from 1 and increments 1 by default",
+                "$ seq 4 // generate 1 to 4",
+                "$ seq 10 2 20 // generate 10 to 20, increment by 2"
+            ]
+        },
+        {
+            "description":"Find system calls used by a program",
+            "tags":[
+                "linux",
+                "shell",
+                "programming"
+            ],
+            "contents":[
+                "strace <program>"
+            ]
+        },
+        {
+            "description":"Find disk usage of files and directories",
+            "tags":[
+                "linux",
+                "shell"
+            ],
+            "contents":[
+                "du - find disk usage of a directory and its files",
+                "-a - display an entry for each file in the directory",
+                "-c - display a grand total",
+                "-h - display info in human readable form (take optional unit suffixes: -m for MB, -g for GB)",
+                "-d <depth> - stop at given depth level"
+            ]
+        },
+        {
+            "description": "Where man pages are stored?",
+            "tags":[
+                "shell",
+                "linux"
+            ],
+            "contents":[
+                "Pages are searched first in the path given by option `-M` if specified.",
+                "If `-M` is not specified, then the path specified in `MANPATH` is looked up.",
+                "If neither `-M` nor `MANPATH` is specified, then the path to man pages is inferred from the config file.",
+                "In general, the default set of man pages live in `/usr/share/man/`",
+                "Applications can install in other paths too and update the `MANPATH` accordingly.",
+                "The location of the config file can differ based on the distribution.",
+                "/private/etc/man.conf - in macOS Mojave",
+                "/etc/man.config - in many linux distributions"
+            ]
         }
     ]
 }
