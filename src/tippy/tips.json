@@ -222,6 +222,20 @@
                 "/private/etc/man.conf - in macOS Mojave",
                 "/etc/man.config - in many linux distributions"
             ]
+        },
+        {
+            "description": "Convert epoch seconds into date",
+            "tags":[
+                "linux",
+                "commands",
+                "shell",
+                "datetime"
+            ],
+            "contents":[
+                "% date -r <seconds> # macOS",
+                "$ date -d @<seconds> # on most linux",
+                "$ date +%s # display current time in epoch seconds"
+            ]
         }
     ]
 }
