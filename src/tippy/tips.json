@@ -236,6 +236,17 @@
                 "$ date -d @<seconds> # on most linux",
                 "$ date +%s # display current time in epoch seconds"
             ]
+        },
+        {
+          "description": "Toggle reader mode in Safari",
+          "tags":[
+            "macOS",
+            "shortcuts",
+            "safari"
+          ],
+          "contents":[
+            "Cmd + Shift + R - toggles reader mode on supported sites"
+          ]
         }
     ]
 }
