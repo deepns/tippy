@@ -245,7 +245,61 @@
             "safari"
           ],
           "contents":[
-            "Cmd + Shift + R - toggles reader mode on supported sites"
+            "`Cmd + Shift + R` - toggles reader mode on supported sites"
+          ]
+        },
+        {
+          "description": "Find files modified in last x minutes or x days",
+          "tags":[
+            "shell",
+            "find",
+            "linux",
+            "commands"
+          ],
+          "contents":[
+            "`$ find . -mmin -60` - find files modified in the last 60 minutes in current directory",
+            "`$ find . -mtime -2` - find files modified in the last 48 hours in current directory"
+          ]
+        },
+        {
+          "description": "Find files accessed in last x minutes or x days",
+          "tags":[
+            "shell",
+            "find",
+            "linux",
+            "commands"
+          ],
+          "contents":[
+            "`$ find . -amin -60` - find files modified in the last 60 minutes in current directory",
+            "`$ find . -atime -2` - find files modified in the last 48 hours in current directory"
+          ]
+        },
+        {
+          "description": "sshpass - specify password for ssh/scp login non-interactively",
+          "tags":[
+            "shell",
+            "linux",
+            "commands",
+            "scp"
+          ],
+          "contents":[
+            "`sshpass -p <password> ssh user@host \"command to run\"` - Use the specified password to connect using ssh",
+            "`sshpass -p <password> scp <source> <destination>` - Use the specified password to connect using scp",
+            "`SSHPASS=password sshpass -e ssh user@host command` - Take the password from the environment variable SSHPASS"
+          ]
+        },
+        {
+          "description": "pqr - some helpful options to scp",
+          "tags":[
+            "shell",
+            "linux",
+            "commands",
+            "scp"
+          ],
+          "contents":[
+            "`-p` - Preserve modification times, access times, and modes",
+            "`-q` - Quiet mode: disables the progress meter as well as warning and diagnostic messages from ssh",
+            "`-r` - Recursively copy entire directories"
           ]
         }
     ]
