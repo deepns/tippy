@@ -315,6 +315,29 @@
             "`-o UserKnownHostsFile=/dev/null` - Use /dev/null instead of the default file (~/.ssh/known_hosts)",
             "Set `StrictHostKeyChecking no` in .ssh/config under `Host <hostname>` to apply this to per hosts"
           ]
+        },
+        {
+          "description": "bash - a quick note on arrays",
+          "tags":[
+            "bash",
+            "shell",
+            "programming"
+          ],
+          "contents":[
+            "arr=() # Create empty array",
+            "arr+=(5) # Append a number to array",
+            "arr+=(xyz) # Append a text to array; arrays can have numbers and strings",
+            "${arr[@]} # Get all items from the array",
+            "${!arr[@]} # Get all indices of the array. Index starts at 0",
+            "${arr[3]} # Get the fourth item from the array",
+            "${arr} # Get first item from the array. Equivalent to ${arr[0]}",
+            "${arr[@]:i:n} # Get n elements starting at index i",
+            "arr=( $(cmd) ) # Save output of a command into an array",
+            "# Sample for loop",
+            "for item in ${arr[@]};do",
+            "    echo $item",
+            "done"
+          ]
         }
     ]
 }
