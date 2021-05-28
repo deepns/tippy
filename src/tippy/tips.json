@@ -289,7 +289,7 @@
           ]
         },
         {
-          "description": "pqr - some helpful options to scp",
+          "description": "scp - some helpful options (pqr)",
           "tags":[
             "shell",
             "linux",
@@ -300,6 +300,20 @@
             "`-p` - Preserve modification times, access times, and modes",
             "`-q` - Quiet mode: disables the progress meter as well as warning and diagnostic messages from ssh",
             "`-r` - Recursively copy entire directories"
+          ]
+        },
+        {
+          "description": "ssh options - Ignore host key checking",
+          "tags":[
+            "ssh",
+            "shell",
+            "commands",
+            "options"
+          ],
+          "contents":[
+            "`-o StrictHostKeyChecking=no` - automatically add new host keys to users known hosts file. Often not needed in controlled environments",
+            "`-o UserKnownHostsFile=/dev/null` - Use /dev/null instead of the default file (~/.ssh/known_hosts)",
+            "Set `StrictHostKeyChecking no` in .ssh/config under `Host <hostname>` to apply this to per hosts"
           ]
         }
     ]
