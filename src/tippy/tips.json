@@ -338,6 +338,36 @@
             "    echo $item",
             "done"
           ]
+        },
+        {
+          "description": "vim - show relative and absolute file path",
+          "tags":[
+            "vim",
+            "programming",
+            "editor",
+            "shortcuts"
+          ],
+          "contents":[
+            "Ctrl+G - shows the relative path of the current file",
+            "{n}Ctrl+G - shows the relative path of the nth file in the buffer",
+            "1Ctrl+G - shows the absolute path of the current file"
+          ]
+        },
+        {
+          "description": "vim - set/toggle option",
+          "tags":[
+            "vim",
+            "shortcuts",
+            "editor",
+            "programming"
+          ],
+          "contents":[
+            ":set <option> - switches on a toggle option",
+            ":set <option>! - toggles the option",
+            ":set <option>? - shows the value of option",
+            "e.g :set nu - turns on the line number, :set nonumber - turns off the line number",
+            ":set nu! toggles the line number on or off,"
+          ]
         }
     ]
 }
