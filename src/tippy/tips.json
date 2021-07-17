@@ -399,6 +399,59 @@
                 "`Cmd + Option + Left` - focus to the window on the left",
                 "`Cmd + Option + Right` - focus to the window on the right"
             ]
+        },
+        {
+            "description": "bash: arithmetic with let",
+            "tags":[
+                "bash",
+                "shell",
+                "programming"
+            ],
+            "contents":[
+                "let # evaluates each argument as an arithmetic expression",
+                "let a=1+9 # assigns a=10",
+                "# If spacing needed for better readability, enclose the expression between quotes",
+                "let \"b = 2 + 8\" # assigns b=10",
+                "# Take values from variables",
+                "let c=$a+$b # assigns sum of a and b to c",
+                "# No escaping needed for *",
+                "let \"d = $a * $b\" # assigns product of a and b to d",
+                "let d++ # increment d by 1 and assign to d"
+            ]
+        },
+        {
+            "description": "bash: arithmetic with expr",
+            "tags":[
+                "bash",
+                "shell",
+                "programming"
+            ],
+            "contents":[
+                "expr 2 + 7 # evaluate the expression and writes to standard output. Spaces are needed between the tokens",
+                "# multiplication operator * need to be escaped",
+                "expr 7 * 3 # results in syntax error",
+                "expr 7 \\* 3 # evaluates to 21",
+                "e=$(expr 2 + 7) # evaluate the expression and assign. Similar to $((expression))",
+                "expr 2+7 # prints the expression as is without evaluating",
+                "expr \"2 + 7\" # prints the expression as is without evaluating even with quotes"
+            ]
+        },
+        {
+            "description": "bash: arithmetic expansion",
+            "tags":[
+                "bash",
+                "shell",
+                "programming"
+            ],
+            "contents":[
+                "# $((expression)) - evaluates the expression and substitutes the result.",
+                "echo $((3+5)) # prints 8",
+                "# spaces are totally fine",
+                "f=$((4 + 4)) # evaluate the expression and assign the value to a variable",
+                "g=$((f * 2)) # variables inside the expression need not be specified with a preceding $ sign",
+                "echo $((g--)) $((g++)) # increment, decrement",
+                "echo ((g += 5) # assignment operators (= *= /= %= += -= <<= >>= &= ^= |=) are also supported"
+            ]
         }
     ]
 }
