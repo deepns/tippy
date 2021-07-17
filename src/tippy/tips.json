@@ -377,14 +377,27 @@
                 "shell"
             ],
             "contents":[
-                "$ read var # gets the input from the user and assings to the variable \"var\"",
-                "$ read -p \"Prompt\" var # shows the prompt message",
-                "$ read -ps \"Prompt\" var # shows the prompt message, but keeps the input hidden.",
-                "E.g.",
-                "$ read -p \"Select: \" choice",
-                "Select: 1",
-                "$ echo $choice",
-                "1"
+                "read var # gets the input from the user and assings to the variable \"var\"",
+                "read -p \"Prompt\" var # shows the prompt message",
+                "read -ps \"Prompt\" var # shows the prompt message, but keeps the input hidden.",
+                "# E.g.",
+                "# $ read -p \"Select: \" choice",
+                "# Select: 1",
+                "# $ echo $choice",
+                "# 1"
+            ]
+        },
+        {
+            "description": "vscode: Split terminal shortcuts",
+            "tags":[
+                "vscode",
+                "shortcuts",
+                "productivity"
+            ],
+            "contents":[
+                "`Cmd + \\` - keyboard shortcut to split the terminal vertically",
+                "`Cmd + Option + Left` - focus to the window on the left",
+                "`Cmd + Option + Right` - focus to the window on the right"
             ]
         }
     ]
