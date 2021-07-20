@@ -452,6 +452,21 @@
                 "echo $((g--)) $((g++)) # increment, decrement",
                 "echo ((g += 5) # assignment operators (= *= /= %= += -= <<= >>= &= ^= |=) are also supported"
             ]
+        },
+        {
+            "description": "ffmpeg2 - Convert video to gif",
+            "tags":[
+                "tools",
+                "ffmpeg"
+            ],
+            "contents":[
+                "# Supports multiple input file formats",
+                "# -r <frame rate>",
+                "# -vf <filter_graph> # e.g. -vf scale=w:hP",
+                "ffmpeg2 -i <input file> -r 10 output.gif",
+                "# set width to 320px and set height based on the width keeping the aspect ratio",
+                "ffmpeg2 -i <input file> -r 10 -vf scale=320:-1 output.gif"   
+            ]
         }
     ]
 }
