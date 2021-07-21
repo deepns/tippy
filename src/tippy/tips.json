@@ -467,6 +467,19 @@
                 "# set width to 320px and set height based on the width keeping the aspect ratio",
                 "ffmpeg2 -i <input file> -r 10 -vf scale=320:-1 output.gif"   
             ]
+        },
+        {
+            "description": "vscode: terminal tab in the editor area",
+            "tags":[
+                "vscode",
+                "shortcuts"
+            ],
+            "contents":[
+                "# Keep the terminal tab along side open files in the editor area",
+                "Terminal: Create Terminal in Editor area",
+                "Terminal: Move Terminal into Editor area"
+            ]
         }
-    ]
+    ],
+    "num_tips" : 34
 }
