@@ -476,7 +476,22 @@
             "contents":[
                 "printf \"0x%x\\n\", 369098752 # prints the value in hex format. e.g. 0x16000000"
             ]
+        },
+        {
+            "description": "vim: yank shortcuts",
+            "tags":[
+                "vim",
+                "shortcuts"
+            ],
+            "contents":[                
+                "`yw` - copy from current to start of the next word",
+                "`yb` - copy from current to beginning of the current word",
+                "`y$` - copy till the end of the line",
+                "`y0` - copy till the start of the line",
+                "`{n}Y` - copy n number of lines",
+                "`{n}yy` - copy n number of lines"
+            ]
         }
     ],
-    "num_tips" : 35
+    "num_tips" : 36
 }
