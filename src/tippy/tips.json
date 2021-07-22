@@ -469,17 +469,14 @@
             ]
         },
         {
-            "description": "vscode: terminal tab in the editor area",
+            "description": "bash: print values in hex",
             "tags":[
-                "vscode",
-                "shortcuts"
+                "bash"   
             ],
             "contents":[
-                "# Keep the terminal tab along side open files in the editor area",
-                "Terminal: Create Terminal in Editor area",
-                "Terminal: Move Terminal into Editor area"
+                "printf \"0x%x\\n\", 369098752 # prints the value in hex format. e.g. 0x16000000"
             ]
         }
     ],
-    "num_tips" : 34
+    "num_tips" : 35
 }
