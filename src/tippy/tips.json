@@ -491,7 +491,30 @@
                 "`{n}Y` - copy n number of lines",
                 "`{n}yy` - copy n number of lines"
             ]
+        },
+        {
+            "description": "C: Get system time in epoch seconds (number of seconds since 1970-01-01 00:00:00 +0000 (UTC))",
+            "tags":[
+                "c",
+                "programming"
+            ],
+            "contents":[
+                "time_t curtime = time(NULL); // time() included from time.h",
+                "(void)time(&curtime); // also sets the seconds in the input buffer if given",
+                "// can also get the time in microsecond granularity with gettimeofday",
+                "struct timeval tm;",
+                "struct timezone tz",
+                "(void)gettimeofday(&tm, &tz); // included from sys/time.h",
+                "// tm.tv_sec - epoch time in seconds",
+                "// tm.tv_usec - microseconds",
+                "// tz.tz_dsttime - is Daylight Savings on?",
+                "// tz.tz_minuteswest - number of minutes from the GMT",
+                "printf(\"secs=%lu, msecs=%d, is_dst=%d, minutes_from_gmt=%d\n\", tm.tv_sec, tm.tv_usec, tz.tz_dsttime, tz.tz_minuteswest);",
+                "printf(\"timestamp=%s\", ctime(&tm.tv_sec)); // get clock time as a readable string",
+                "// ctime returns a pointer to statically allocated buffer holding the stamp.",
+                "// Subsequent calls to ctime() would overwrite the buffer. Use ctime_r() to write the string to user provided buffer instead."
+            ]
         }
     ],
-    "num_tips" : 36
+    "num_tips" : 37
 }
