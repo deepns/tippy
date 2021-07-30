@@ -496,7 +496,8 @@
             "description": "C: Get system time in epoch seconds (number of seconds since 1970-01-01 00:00:00 +0000 (UTC))",
             "tags":[
                 "c",
-                "programming"
+                "programming",
+                "datetime"
             ],
             "contents":[
                 "time_t curtime = time(NULL); // time() included from time.h",
@@ -514,7 +515,33 @@
                 "// ctime returns a pointer to statically allocated buffer holding the stamp.",
                 "// Subsequent calls to ctime() would overwrite the buffer. Use ctime_r() to write the string to user provided buffer instead."
             ]
+        },
+        {
+            "description": "bash: display information about a command type",
+            "tags":[
+                "shell",
+                "bash",
+                "programming"
+            ],
+            "contents":[
+                "type arg # arg can be a command, function, aliases an built-ins",
+                "type -a arg # display all locations containing an executable named NAME",
+                "type -t arg # output a single word which is one of alias, keyword, function, builtin, file",
+                "# e.g.",
+                "ubuntu@ubuntu-lts:~$ os_release()",
+                "> {",
+                ">     cat /etc/os-release",
+                "> }",
+                "ubuntu@ubuntu-lts:~$ type -t os_release",
+                "function",
+                "ubuntu@ubuntu-lts:~$ type -a os_release", 
+                "os_release is a function",
+                "os_release ()", 
+                "{",
+                "   cat /etc/os-release",
+                "}"
+            ]
         }
     ],
-    "num_tips" : 37
+    "num_tips" : 38
 }
