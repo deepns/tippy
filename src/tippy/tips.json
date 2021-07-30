@@ -465,13 +465,13 @@
                 "# -vf <filter_graph> # e.g. -vf scale=w:hP",
                 "ffmpeg2 -i <input file> -r 10 output.gif",
                 "# set width to 320px and set height based on the width keeping the aspect ratio",
-                "ffmpeg2 -i <input file> -r 10 -vf scale=320:-1 output.gif"   
+                "ffmpeg2 -i <input file> -r 10 -vf scale=320:-1 output.gif"
             ]
         },
         {
             "description": "bash: print values in hex",
             "tags":[
-                "bash"   
+                "bash"
             ],
             "contents":[
                 "printf \"0x%x\\n\", 369098752 # prints the value in hex format. e.g. 0x16000000"
@@ -483,7 +483,7 @@
                 "vim",
                 "shortcuts"
             ],
-            "contents":[                
+            "contents":[
                 "`yw` - copy from current to start of the next word",
                 "`yb` - copy from current to beginning of the current word",
                 "`y$` - copy till the end of the line",
