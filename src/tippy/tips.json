@@ -541,7 +541,25 @@
                 "   cat /etc/os-release",
                 "}"
             ]
+        },
+        {
+            "description": "regex: filter ipv4 address",
+            "tags":[
+                "linux",
+                "tools",
+                "regex"
+            ],
+            "contents":[
+                "# regex pattern to filter IPv4 addresses",
+                "# upto 3 digits followed by ., repeated 3 times and up to 3 digits",
+                "# this is too generic. so invalid IPs like 333.232.444.999 would also be considered valid",
+                "ifconfig | egrep -o '([0-9]{1,3}\\.){3}[0-9]{1,3}'",
+                "# To search for only valid IP addr and output only the IP addr",
+                "ifconfig | egrep -o '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'",
+                "# Skip localhost and subnet masks",
+                "ifconfig | egrep -o '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' | egrep -v '^255|127.0.0.1'"
+            ]
         }
     ],
-    "num_tips" : 38
+    "num_tips" : 39
 }
