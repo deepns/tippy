@@ -559,7 +559,37 @@
                 "# Skip localhost and subnet masks",
                 "ifconfig | egrep -o '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' | egrep -v '^255|127.0.0.1'"
             ]
+        },
+        {
+            "description": "sed - Get a line or range of lines",
+            "tags":[
+                "linux",
+                "tools",
+                "shell",
+                "sed"
+            ],
+            "contents":[
+                "# Get contents of line number n from file",
+                "# -n - tells sed not to print the lines unless explicity requested",
+                "# 'p' - print command",
+                "# 'q' - quit sed",
+                "sed -n '10p' # print line number 10, but will continue processing the rest of the file too",
+                "sed -n '10p;11q' # print line number 10 and quit processing",
+                "sed -n '5,10p;11q' # print line number from 5 to 10 and quit processing"
+            ]
+        },
+        {
+            "description":"grep - find empty lines",
+            "tags":[
+                "linux",
+                "shell",
+                "tools",
+                "grep"
+            ],
+            "contents":[
+                "grep -n '^$' <file> # print line numbers of empty lines in the given file"
+            ]
         }
     ],
-    "num_tips" : 39
+    "num_tips" : 41
 }
