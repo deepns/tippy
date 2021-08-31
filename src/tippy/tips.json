@@ -589,7 +589,31 @@
             "contents":[
                 "grep -n '^$' <file> # print line numbers of empty lines in the given file"
             ]
+        },
+        {
+            "description": "vim - clear all trailing whitespaces",
+            "tags":[
+                "linux",
+                "vim",
+                "tools"
+            ],
+            "contents":[
+                "\" function to clear trailing white spaces",
+                "fun! TrimTrailingWhiteSpace()",
+                "    let l:save = winsaveview()",
+                "    keeppatterns %s/\\s\\+$//e",
+                "    call winrestview(l:save)",
+                "    \" without saving and restoring the view, the cursor",
+                "    \" moves to the line of the last search result where",
+                "    \" the edit is made",
+                "endfun",
+                "",
+                "\" Use a shortcut to invoke the function",
+                "\" for e.g. I use the leader key \\ followed by w",
+                "\\ + w to clear the trailing whitespace",
+                ":noremap <Leader>w :call TrimTrailingWhiteSpace()<CR>"
+            ]
         }
     ],
-    "num_tips" : 41
+    "num_tips" : 42
 }
