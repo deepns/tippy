@@ -613,7 +613,20 @@
                 "\\ + w to clear the trailing whitespace",
                 ":noremap <Leader>w :call TrimTrailingWhiteSpace()<CR>"
             ]
+        },
+        {
+            "description": "openssl - show certificate validity",
+            "tags":[
+                "tools",
+                "openssl"
+            ],
+            "contents":[
+                "# show notBefore and notAfter date of the given certificate",
+                "openssl x509 -noout -startdate -enddate -in <certificate>",
+                "# print all details of the certificate in text format",
+                "openssl x509 -noout -text -in root_ca.crt"
+            ]
         }
     ],
-    "num_tips" : 42
+    "num_tips" : 43
 }
