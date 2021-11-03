@@ -626,6 +626,17 @@
                 "# print all details of the certificate in text format",
                 "openssl x509 -noout -text -in root_ca.crt"
             ]
+        },
+        {
+            "description": "Python: Get host name of the system",
+            "tags":[
+                "python",
+                "scripts"
+            ],
+            "contents":[
+                "import socket",
+                "print(socket.gethostname()) # print hostname to stdout"
+            ]
         }
     ],
     "num_tips" : 43
