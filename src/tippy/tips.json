@@ -637,7 +637,38 @@
                 "import socket",
                 "print(socket.gethostname()) # print hostname to stdout"
             ]
+        },
+        {
+            "description": "Python: Get interpreter history",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "# History of commands run in python interpreter are cached at $HOME/.python_history",
+                "# readline module provides the methods to access the entries from the underlying history buffer",
+                "# readline.get_current_history_length() returns the current number of items",
+                "# readline.get_history_item(index) returns the item at the given index",
+                "import readline",
+                "history_length = readline.get_current_history_length()",
+                "for i in range(1, history_length):",
+                "    print(readline.get_history_item(i)"
+            ]
+
+        },
+        {
+            "description": "Python: Startup scripts for the interactive sessions",
+            "tags":[
+                "programming",
+                "python"
+            ],
+            "contents":[
+                "# If the environment variable PYTHONPATH points to a readable file",
+                "# commands in that file are executed before the prompt is given to the",
+                "# user in interactive mode",
+                "# e.g. export PYTHONPATH=$HOME/.pythonrc.py"
+            ]
         }
     ],
-    "num_tips" : 43
+    "num_tips" : 45
 }
