@@ -668,7 +668,62 @@
                 "# user in interactive mode",
                 "# e.g. export PYTHONPATH=$HOME/.pythonrc.py"
             ]
+        },
+        {
+            "description": "vim - switching between vim buffers",
+            "tags":[
+                "programming",
+                "productivity",
+                "vim",
+                "editor"
+            ],
+            "contents":[
+                ":buffers or :ls or :files - list open buffers",
+                ":bn, :bnext - go to next buffer",
+                ":bp, :bprev - go to previous buffer",
+                ":b <filename> - go to buffer with the given file name",
+                ":b ex - open buffer with filename starting with ex",
+                "Ctrl-6 - toggle between current and last buffer"
+            ]
+        },
+        {
+            "description": "vim - search patterns using vimgrep",
+            "tags":[
+                "vim",
+                "productivity",
+                "editor",
+                "programming"
+            ],
+            "contents":[
+                ":vimgrep /{pattern}/[g][j] {filenames} - search pattern in given files and update quicklist (aka error list)",
+                "    - {pattern} follows vim regex pattern",
+                "    - g - return all matches",
+                "    - j - update quick list only. do not jump to the first match.",
+                "    vimgrep loads the file into memory, so can be slow for large files",
+                ":cn - go to next match in the quick list",
+                ":cp - go to previous match in the quick list",
+                ":cc n - go to nth match in the quick list",
+                ":clist [from] [to] - list all errors that are valid",
+                ":copen - open a window to show list of errors"
+            ]
+        },
+        {
+            "description": "vim - misc shortcuts",
+            "tags":[
+                "vim",
+                "editor",
+                "productivity"
+            ],
+            "contents":[
+                "q: - (in command mode) to list the commands in chronological order. Allows editing too",
+                ":history - list commands from history table",
+                ":set <setting-name>? - show the current value of the given setting",
+                ":echo &<setting-name> - show the current value of the given setting",
+                ":echo &cmdwinheight - show the current value of cmdwinheight",
+                ":set! all - show all settings, one per line",
+                ":set cmdwinheight=10 - set the height of the command history window to 10. Default is 7"
+            ]
         }
     ],
-    "num_tips" : 45
+    "num_tips" : 48
 }
