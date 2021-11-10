@@ -723,7 +723,17 @@
                 ":set! all - show all settings, one per line",
                 ":set cmdwinheight=10 - set the height of the command history window to 10. Default is 7"
             ]
+        },
+        {
+            "description": "git - revert changes to a single file",
+            "tags":[
+                "git",
+                "shortcuts"
+            ],
+            "contents":[
+                "git checkout [commit ID] -- /path/to/your/file # Defaults to HEAD if no commit ID is specified"
+            ]
         }
     ],
-    "num_tips" : 48
+    "num_tips" : 49
 }
