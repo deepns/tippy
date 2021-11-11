@@ -733,7 +733,24 @@
             "contents":[
                 "git checkout [commit ID] -- /path/to/your/file # Defaults to HEAD if no commit ID is specified"
             ]
+        },
+        {
+            "description": "Python - register functions to be called at exit",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "import atexit",
+                "atexit.register(func1) # register func1 to be called when interpreter exits (some exceptions apply)",
+                "atexit.register(func2, arg1, arg2) # func2(arg1, arg2) will be called at exit",
+                "atexit.register(func3, arg1=\"foo\", arg2=\"bar\") # func3(arg1=\"foo\", arg2=\"bar\") will be called at exit",
+                "@atexit.register # use decorator to register functions. Can't be used with functions with args",
+                "def func4():",
+                "    print(\"Bye\")",
+                "# registered functions are called in last-in-first-out order"
+            ]
         }
     ],
-    "num_tips" : 49
+    "num_tips" : 50
 }
