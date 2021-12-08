@@ -388,16 +388,18 @@
             ]
         },
         {
-            "description": "vscode: Split terminal shortcuts",
+            "description": "vscode: terminal shortcuts",
             "tags":[
                 "vscode",
                 "shortcuts",
+                "terminal",
                 "productivity"
             ],
             "contents":[
                 "`Cmd + \\` - keyboard shortcut to split the terminal vertically",
                 "`Cmd + Option + Left` - focus to the window on the left",
-                "`Cmd + Option + Right` - focus to the window on the right"
+                "`Cmd + Option + Right` - focus to the window on the right",
+                "`Cmd + j` - hide the terminal window and focus on active editor group"
             ]
         },
         {
