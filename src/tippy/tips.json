@@ -752,7 +752,21 @@
                 "    print(\"Bye\")",
                 "# registered functions are called in last-in-first-out order"
             ]
+        },
+        {
+            "description": "Makefile - automatic variables within the recipe",
+            "tags":[
+                "programming",
+                "makefile"
+            ],
+            "contents":[
+                "# $@ - file name of the target of the rule",
+                "# $< - name of the first prerequisite",
+                "# $? - names of all prerequisites that newer than target",
+                "# $^ - name of all prerequisites",
+                "# NOTE: these variables are available only within the recipe of a target"
+            ]
         }
     ],
-    "num_tips" : 50
+    "num_tips" : 51
 }
