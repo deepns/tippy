@@ -639,7 +639,120 @@
                 "import socket",
                 "print(socket.gethostname()) # print hostname to stdout"
             ]
+        },
+        {
+            "description": "Python: Get interpreter history",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "# History of commands run in python interpreter are cached at $HOME/.python_history",
+                "# readline module provides the methods to access the entries from the underlying history buffer",
+                "# readline.get_current_history_length() returns the current number of items",
+                "# readline.get_history_item(index) returns the item at the given index",
+                "import readline",
+                "history_length = readline.get_current_history_length()",
+                "for i in range(1, history_length):",
+                "    print(readline.get_history_item(i)"
+            ]
+
+        },
+        {
+            "description": "Python: Startup scripts for the interactive sessions",
+            "tags":[
+                "programming",
+                "python"
+            ],
+            "contents":[
+                "# If the environment variable PYTHONPATH points to a readable file",
+                "# commands in that file are executed before the prompt is given to the",
+                "# user in interactive mode",
+                "# e.g. export PYTHONPATH=$HOME/.pythonrc.py"
+            ]
+        },
+        {
+            "description": "vim - switching between vim buffers",
+            "tags":[
+                "programming",
+                "productivity",
+                "vim",
+                "editor"
+            ],
+            "contents":[
+                ":buffers or :ls or :files - list open buffers",
+                ":bn, :bnext - go to next buffer",
+                ":bp, :bprev - go to previous buffer",
+                ":b <filename> - go to buffer with the given file name",
+                ":b ex - open buffer with filename starting with ex",
+                "Ctrl-6 - toggle between current and last buffer"
+            ]
+        },
+        {
+            "description": "vim - search patterns using vimgrep",
+            "tags":[
+                "vim",
+                "productivity",
+                "editor",
+                "programming"
+            ],
+            "contents":[
+                ":vimgrep /{pattern}/[g][j] {filenames} - search pattern in given files and update quicklist (aka error list)",
+                "    - {pattern} follows vim regex pattern",
+                "    - g - return all matches",
+                "    - j - update quick list only. do not jump to the first match.",
+                "    vimgrep loads the file into memory, so can be slow for large files",
+                ":cn - go to next match in the quick list",
+                ":cp - go to previous match in the quick list",
+                ":cc n - go to nth match in the quick list",
+                ":clist [from] [to] - list all errors that are valid",
+                ":copen - open a window to show list of errors"
+            ]
+        },
+        {
+            "description": "vim - misc shortcuts",
+            "tags":[
+                "vim",
+                "editor",
+                "productivity"
+            ],
+            "contents":[
+                "q: - (in command mode) to list the commands in chronological order. Allows editing too",
+                ":history - list commands from history table",
+                ":set <setting-name>? - show the current value of the given setting",
+                ":echo &<setting-name> - show the current value of the given setting",
+                ":echo &cmdwinheight - show the current value of cmdwinheight",
+                ":set! all - show all settings, one per line",
+                ":set cmdwinheight=10 - set the height of the command history window to 10. Default is 7"
+            ]
+        },
+        {
+            "description": "git - revert changes to a single file",
+            "tags":[
+                "git",
+                "shortcuts"
+            ],
+            "contents":[
+                "git checkout [commit ID] -- /path/to/your/file # Defaults to HEAD if no commit ID is specified"
+            ]
+        },
+        {
+            "description": "Python - register functions to be called at exit",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "import atexit",
+                "atexit.register(func1) # register func1 to be called when interpreter exits (some exceptions apply)",
+                "atexit.register(func2, arg1, arg2) # func2(arg1, arg2) will be called at exit",
+                "atexit.register(func3, arg1=\"foo\", arg2=\"bar\") # func3(arg1=\"foo\", arg2=\"bar\") will be called at exit",
+                "@atexit.register # use decorator to register functions. Can't be used with functions with args",
+                "def func4():",
+                "    print(\"Bye\")",
+                "# registered functions are called in last-in-first-out order"
+            ]
         }
     ],
-    "num_tips" : 43
+    "num_tips" : 50
 }
