@@ -766,7 +766,22 @@
                 "# $^ - name of all prerequisites",
                 "# NOTE: these variables are available only within the recipe of a target"
             ]
+        },
+        {
+            "description": "Python: pretty print python data structures",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "# pprint module provides a way to pretty print arbitrary",
+                "# data structures including the built in data types.",
+                "import pprint",
+                "pprint.print(mydict)",
+                "# pprint.print defaults to 80 columns per line.",
+                "# depth and indent level can be adjusted too"
+            ]
         }
     ],
-    "num_tips" : 51
+    "num_tips" : 52
 }
