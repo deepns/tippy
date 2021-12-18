@@ -781,7 +781,21 @@
                 "# pprint.print defaults to 80 columns per line.",
                 "# depth and indent level can be adjusted too"
             ]
+        },
+        {
+            "description": "shell - delimit by consecutive whitespaces/tabs in cut",
+            "tags":[
+                "programming",
+                "shell"
+            ],
+            "contents":[
+                "# -w option to cut filters the text using whitespaces and tabs as delimiters",
+                "# consecutive white spaces and tabs counted as single field",
+                "cut -w -f 4-6 # filter the lines by whitespaces/tab and output fields 4 through 6",
+                "# NOTE: This is available only in cut implementation conforming to (“POSIX.2”)",
+                "# supported on macOS"
+            ]
         }
     ],
-    "num_tips" : 52
+    "num_tips" : 53
 }
