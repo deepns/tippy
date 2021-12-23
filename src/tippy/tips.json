@@ -795,7 +795,18 @@
                 "# NOTE: This is available only in cut implementation conforming to (“POSIX.2”)",
                 "# supported on macOS"
             ]
+        },
+        {
+            "description": "macOS - show emoji keyboard",
+            "tags":[
+                "macOS",
+                "keyboard",
+                "shortcuts"
+            ],
+            "contents":[
+                "Ctrl + Cmd + Spacebar -> to bring up emoji keyboard 😎"
+            ]
         }
     ],
-    "num_tips" : 53
+    "num_tips" : 54
 }
