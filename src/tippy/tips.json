@@ -795,7 +795,19 @@
                 "# NOTE: This is available only in cut implementation conforming to (“POSIX.2”)",
                 "# supported on macOS"
             ]
+        },
+        {
+            "description": "kubernetes - get all resources in a k8s namespace",
+            "tags":[
+                "kubernetes",
+                "programming"
+            ],
+            "contents":[
+                "kubectl get all -n <namespace> -o json | jq -r '.items[] | .kind' | sort | uniq # list kind of resources in the given namespace",
+                "kubectl get all -n <namespace> # summary of all resources under the given namespace",
+                "kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl -n <namespace> get --show-kind --ignore-not-found # similar to the previous"
+            ]
         }
     ],
-    "num_tips" : 53
+    "num_tips" : 54
 }
