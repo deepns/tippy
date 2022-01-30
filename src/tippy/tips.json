@@ -829,7 +829,18 @@
             "contents":[
                 "# create /home/$USER/.hushlogin to suppress ssh login banner for a particular user"
             ]
+        },
+        {
+            "description": "golang - discard all writes",
+            "tags": [
+                "programming",
+                "golang"
+            ],
+            "contents":[
+                "io.Discard is equivalent /dev/null",
+                "All writes to io.Discard succeeds without doing anything"
+            ]
         }
     ],
-    "num_tips" : 56
+    "num_tips" : 57
 }
