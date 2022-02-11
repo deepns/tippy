@@ -840,7 +840,31 @@
                 "io.Discard is equivalent /dev/null",
                 "All writes to io.Discard succeeds without doing anything"
             ]
+        },
+        {
+            "description":"shell - get specific line in a file",
+            "tags":[
+                "programming",
+                "shell"
+            ],
+            "contents":[
+                "# there are multiple ways to do this. I find sed easier than others",
+                "# sed -n 'np' file - to get nth line a file",
+                "sed -n '10p' file # to get 10th line in a file"
+            ]
+        },
+        {
+            "description":"shell - set the positional parameters",
+            "tags":[
+                "programming",
+                "shell"
+            ],
+            "contents":[
+                "# Set the values of the positional parameters to script, bash functions",
+                "# set foo to $1, bar to $2",
+                "set -- foo bar"
+            ]
         }
     ],
-    "num_tips" : 57
+    "num_tips" : 59
 }
