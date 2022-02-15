@@ -864,7 +864,21 @@
                 "# set foo to $1, bar to $2",
                 "set -- foo bar"
             ]
+        },
+        {
+            "description": "jq - filter keys with special characters",
+            "tags":[
+                "json",
+                "programming",
+                "tools",
+                "jq"
+            ],
+            "contents":[
+                "# If keys in json data contain special characters, the keys need to be enclosed in \"\" in the jq filter string",
+                "# e.g. ",
+                "kubectl get secrets cluster-xyz -o json | jq -r '.data.\"tls.crt\"' | base64 --decode"
+            ]
         }
     ],
-    "num_tips" : 59
+    "num_tips" : 60
 }
