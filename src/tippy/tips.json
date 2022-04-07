@@ -878,7 +878,22 @@
                 "# e.g. ",
                 "kubectl get secrets cluster-xyz -o json | jq -r '.data.\"tls.crt\"' | base64 --decode"
             ]
+        },
+        {
+            "description": "tmux - send commands to multiple panes at the same time",
+            "tags":[
+                "tmux",
+                "programming",
+                "tools",
+                "shortcuts"
+            ],
+            "contents":[
+                "Prefix key + : - to bring command prompt",
+                ":setw synchronize-panes on - to turn on command synchronization",
+                ":setw synchronize-panes off - to turn off command synchronization",
+                "The default prefix is Ctrl-B. I use Ctrl-L"
+            ]
         }
     ],
-    "num_tips" : 60
+    "num_tips" : 61
 }
