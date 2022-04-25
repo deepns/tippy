@@ -893,7 +893,21 @@
                 ":setw synchronize-panes off - to turn off command synchronization",
                 "The default prefix is Ctrl-B. I use Ctrl-L"
             ]
+        },
+        {
+            "description": "du - display the size of directories, skip subdirectories",
+            "tags":[
+                "linux",
+                "shell",
+                "commands",
+                "tools"
+            ],
+            "contents":[
+                "# du displays the size of the subdirectories as well by default.",
+                "du -sch dir1 dir2 #display size of dir1 and dir2 and the grand total in human readable form"
+            ]
+
         }
     ],
-    "num_tips" : 61
+    "num_tips" : 62
 }
