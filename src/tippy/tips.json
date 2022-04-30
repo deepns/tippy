@@ -808,17 +808,6 @@
             ]
         },
         {
-            "description": "macOS - show emoji keyboard",
-            "tags":[
-                "macOS",
-                "keyboard",
-                "shortcuts"
-            ],
-            "contents":[
-                "Ctrl + Cmd + Spacebar -> to bring up emoji keyboard 😎"
-            ]
-        },
-        {
             "description": "ssh - disable login banner",
             "tags":[
                 "linux",
@@ -908,5 +897,5 @@
 
         }
     ],
-    "num_tips" : 62
+    "num_tips" : 61
 }
