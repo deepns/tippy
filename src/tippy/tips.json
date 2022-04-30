@@ -806,18 +806,7 @@
             "contents":[
                 "Ctrl + Cmd + Spacebar -> to bring up emoji keyboard 😎"
             ]
-        },
-        {
-            "description": "ssh - disable login banner",
-            "tags":[
-                "linux",
-                "ssh",
-                "productivity"
-            ],
-            "contents":[
-                "# create /home/$USER/.hushlogin to suppress ssh login banner for a particular user"
-            ]
         }
     ],
-    "num_tips" : 55
+    "num_tips" : 54
 }
