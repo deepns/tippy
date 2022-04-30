@@ -895,7 +895,19 @@
                 "du -sch dir1 dir2 #display size of dir1 and dir2 and the grand total in human readable form"
             ]
 
+        },
+        {
+            "description": "macOS/finder - keyboard shortcuts",
+            "tags":[
+                "macOS",
+                "keyboard",
+                "shortcuts"
+            ],
+            "contents":[
+                "Cmd + Shift + N - to create a new folder",
+                "Cmd + Delete - to delete a file or folder"
+            ]
         }
     ],
-    "num_tips" : 61
+    "num_tips" : 62
 }
