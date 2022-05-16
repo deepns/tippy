@@ -907,7 +907,19 @@
                 "Cmd + Shift + N - to create a new folder",
                 "Cmd + Delete - to delete a file or folder"
             ]
+        },
+        {
+            "description":"gdb - dump backtrace of all threads",
+            "tags":[
+                "programming",
+                "gdb",
+                "debugging"
+            ],
+            "contents":[
+                "#dump backtrace of all threads",
+                "thread apply all backtrace"
+            ]
         }
     ],
-    "num_tips" : 62
+    "num_tips" : 63
 }
