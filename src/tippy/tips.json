@@ -919,7 +919,26 @@
                 "#dump backtrace of all threads",
                 "thread apply all backtrace"
             ]
+        },
+        {
+            "description": "markdown - insert multi line quote",
+            "tags":[
+                "markdown",
+                "editor"
+            ],
+            "contents":[
+                "`>` - inserts a block quote in markdown.",
+                "Add two spaces at the end of line to make a multi line quote",
+                "> Stay hungry",
+                "> Stay foolish",
+                "will produce | Stay hungry Stay foolish",
+                "> Stay hungry  ",
+                "> Stay foolish  ",
+                "will produce",
+                "| Stay hungry",
+                "| Stay foolish"
+            ]
         }
     ],
-    "num_tips" : 63
+    "num_tips" : 64
 }
