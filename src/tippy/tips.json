@@ -933,7 +933,21 @@
                 "<filename> is specified as per path spec. See https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec",
                 "# git checkout -- filename"
             ]
+        },
+        {
+            "description": "git - add a remote branch and set local branch to push to new remote branch",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "# The workflow goes like this",
+                "# git checkout -b <a_new_branch>",
+                "# make edits..make commits..time to push to remote branch and/or create PR",
+                "# git push --set-upstream origin <a_new_branch>",
+                "# git push"
+            ]
         }
     ],
-    "num_tips" : 64
+    "num_tips" : 65
 }
