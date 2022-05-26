@@ -919,7 +919,21 @@
                 "#dump backtrace of all threads",
                 "thread apply all backtrace"
             ]
+        },
+        {
+            "description": "git - undo uncommited local changes to a specific file",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "# To undo uncommitted local changes to a specific file.",
+                "# This command overwrites the current version of filename",
+                " with the version from remote branch",
+                "<filename> is specified as per path spec. See https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec",
+                "# git checkout -- filename"
+            ]
         }
     ],
-    "num_tips" : 63
+    "num_tips" : 64
 }
