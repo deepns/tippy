@@ -947,7 +947,33 @@
                 "# git push --set-upstream origin <a_new_branch>",
                 "# git push"
             ]
+        },
+        {
+            "description": "git - deleting a branch",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "git branch -d <branch> # to delete local branch",
+                "git branch -D <branch> # to force delete local branch",
+                "git push <remote> --delete <remote-branch-name> # to delete remote branch.",
+                "# e.g. git push origin --delete pr123456"
+            ]
+        },
+        {
+            "description": "vim - open multiple files in tabs",
+            "tags":[
+                "programming",
+                "vim",
+                "editor",
+                "productivity"
+            ],
+            "contents":[
+                "# use option -p with vim to open multiple files in tabs",
+                "vim -p file1 file2 file3"
+            ]
         }
     ],
-    "num_tips" : 65
+    "num_tips" : 67
 }
