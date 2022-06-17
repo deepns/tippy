@@ -973,7 +973,20 @@
                 "# use option -p with vim to open multiple files in tabs",
                 "vim -p file1 file2 file3"
             ]
+        },
+        {
+            "description": "docker - display only repo and tag info in docker images",
+            "tags":[
+                "docker",
+                "commands",
+                "tools" 
+            ],
+            "contents":[
+                "# to display only image repo and tag information in 'docker images' command",
+                "# useful when including the output in other commands such as docker run",
+                "docker images --format '{{.Repository}}:{{.Tag}}'"
+            ]
         }
     ],
-    "num_tips" : 67
+    "num_tips" : 68
 }
