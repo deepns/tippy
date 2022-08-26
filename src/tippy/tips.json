@@ -1005,7 +1005,19 @@
                 "| Stay hungry",
                 "| Stay foolish"
             ]
+        },
+        {
+            "description": "valgrind - check mem leaks, double free, double free",
+            "tags":[
+                "c",
+                "programming",
+                "tools",
+                "valgrind"
+            ],
+            "contents":[
+                "valgrind --tool=memcheck --leak-check=yes --track-origins=yes <executable>"
+            ]
         }
     ],
-    "num_tips" : 69
+    "num_tips" : 70
 }
