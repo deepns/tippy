@@ -921,6 +921,73 @@
             ]
         },
         {
+            "description": "git - undo uncommited local changes to a specific file",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "# To undo uncommitted local changes to a specific file.",
+                "# This command overwrites the current version of filename",
+                " with the version from remote branch",
+                "<filename> is specified as per path spec. See https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec",
+                "# git checkout -- filename"
+            ]
+        },
+        {
+            "description": "git - add a remote branch and set local branch to push to new remote branch",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "# The workflow goes like this",
+                "# git checkout -b <a_new_branch>",
+                "# make edits..make commits..time to push to remote branch and/or create PR",
+                "# git push --set-upstream origin <a_new_branch>",
+                "# git push"
+            ]
+        },
+        {
+            "description": "git - deleting a branch",
+            "tags":[
+                "programming",
+                "git"
+            ],
+            "contents":[
+                "git branch -d <branch> # to delete local branch",
+                "git branch -D <branch> # to force delete local branch",
+                "git push <remote> --delete <remote-branch-name> # to delete remote branch.",
+                "# e.g. git push origin --delete pr123456"
+            ]
+        },
+        {
+            "description": "vim - open multiple files in tabs",
+            "tags":[
+                "programming",
+                "vim",
+                "editor",
+                "productivity"
+            ],
+            "contents":[
+                "# use option -p with vim to open multiple files in tabs",
+                "vim -p file1 file2 file3"
+            ]
+        },
+        {
+            "description": "docker - display only repo and tag info in docker images",
+            "tags":[
+                "docker",
+                "commands",
+                "tools" 
+            ],
+            "contents":[
+                "# to display only image repo and tag information in 'docker images' command",
+                "# useful when including the output in other commands such as docker run",
+                "docker images --format '{{.Repository}}:{{.Tag}}'"
+            ]
+        },
+        {
             "description": "markdown - insert multi line quote",
             "tags":[
                 "markdown",
@@ -940,5 +1007,5 @@
             ]
         }
     ],
-    "num_tips" : 64
+    "num_tips" : 69
 }
