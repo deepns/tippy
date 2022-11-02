@@ -1017,7 +1017,21 @@
             "contents":[
                 "valgrind --tool=memcheck --leak-check=yes --track-origins=yes <executable>"
             ]
+        },
+        {
+            "description": "tmux - reclaim the entire window during attach",
+            "tags":[
+                "tmux",
+                "terminal",
+                "productivity"
+            ],
+            "contents":[
+                "# After attaching to a session, tmux can sometimes fill the window with L-shaped ",
+                "# ....., leaving very little space for the actual client. This can happen if the ",
+                "# session is attached elsewhere. Use the flag -d to detach the existing session.",
+                "$ tmux attach-session -d"
+            ]
         }
     ],
-    "num_tips" : 70
+    "num_tips" : 71
 }
