@@ -1053,7 +1053,27 @@
                 ">>> now.tzinfo",
                 "<DstTzInfo 'US/Eastern' EST-1 day, 19:00:00 STD>"
             ]
+        },
+        {
+            "description": "Python - using pathlib for quick actions with files",
+            "tags":[
+                "python",
+                "programming",
+                "io"
+            ],
+            "contents":[
+                "# for simple actions like opening a file and just reading some text",
+                "# or writing few lines of text in a string, pathlib.Path can be a great option",
+                "# it abstracts away the usual workflow of opening a file, writing and closing",
+                "# into convenient functions",
+                ">>> from pathlib import Path",
+                ">>> myfile = Path(\"foobar.txt\")",
+                ">>> myfile.write_text(\"foobar\")",
+                "6",
+                ">>> myfile.read_text()",
+                "'foobar'"
+            ]
         }
     ],
-    "num_tips" : 72
+    "num_tips" : 73
 }
