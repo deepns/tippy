@@ -1031,7 +1031,29 @@
                 "# session is attached elsewhere. Use the flag -d to detach the existing session.",
                 "$ tmux attach-session -d"
             ]
+        },
+        {
+            "description": "Python - Get current time with timezone info",
+            "tags":[
+                "python",
+                "programming",
+                "datetime"
+            ],
+            "contents":[
+                "# Use pytz.timezone to add timezone info when dealing with datetime",
+                ">>> from datetime import datetime",
+                ">>> from pytz import timezone",
+                ">>> now = datetime.now(tz=timezone(\"EST\"))",
+                ">>> now",
+                "datetime.datetime(2022, 11, 11, 12, 6, 3, 779069, tzinfo=<StaticTzInfo 'EST'>)",
+                ">>> # another way to do the same",
+                "... ",
+                ">>> eastern = timezone(\"US/Eastern\")",
+                ">>> now = eastern.localize(datetime.now())",
+                ">>> now.tzinfo",
+                "<DstTzInfo 'US/Eastern' EST-1 day, 19:00:00 STD>"
+            ]
         }
     ],
-    "num_tips" : 71
+    "num_tips" : 72
 }
