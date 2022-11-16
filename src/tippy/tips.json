@@ -1073,7 +1073,39 @@
                 ">>> myfile.read_text()",
                 "'foobar'"
             ]
+        },
+        {
+            "description": "shell - list only directories",
+            "tags":[
+                "shell",
+                "commands",
+                "shortcuts",
+                "linux"
+            ],
+            "contents":[
+                "# ls */ - lists directories recursively",
+                "# ls -d */ - lists only directories in current directory",
+                "ls -d */",
+                "# another way to do this, but in long listing format",
+                "# ls -l | grep ^d"
+            ]
+        },
+        {
+            "description": "tools - list contents of a tar/tar.gz archive",
+            "tags":[
+                "shell",
+                "tools",
+                "productivity",
+                "shortcuts"
+            ],
+            "contents":[
+                "# to simply list contents of a tar archive without unarchiving it",
+                "tar -tvf file.tar # list conents of .tar file",
+                "tar -tzvf file.tar.gz # list contents of zipped tar",
+                "tar -jtvf file.tar.bz2 # list contents of tar.bz2 file",
+                "tar -tvf file.tar '*.cpp' # search for .cpp files in the archive"
+            ]
         }
     ],
-    "num_tips" : 73
+    "num_tips" : 75
 }
