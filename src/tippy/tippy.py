@@ -1,9 +1,12 @@
 #! /usr/bin/env python3
 
 import json
-import random
-import os
+from multiprocessing.sharedctypes import Value
 from pathlib import Path
+import random
+from urllib import request
+import requests
+import validators
 
 def validate_config_keys(config:dict):
     required_keys = {
@@ -61,11 +64,19 @@ def get_tips(config) -> list:
         with open(data_file) as fp:
             db = json.load(fp)
             tips += list(filter(by_tags, db["tips"]))
+    
+    remote_files = filter(lambda x: validators.url(x), config.get("remote_files", []))
+    for remote_file in remote_files:
+        response = requests.get(remote_file)
+        db = response.json()
+        tips += list(filter(by_tags, db["tips"]))
+
     try:
         return random.sample(tips, k=count)
-    except(ValueError):
+    except ValueError:
+        # raises ValueError: Sample larger than population or is negative when list is empty
         return []
-
+    
 def show_tip(tip):
     '''
     Prints the contents of the given tip

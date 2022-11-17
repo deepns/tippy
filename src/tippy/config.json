@@ -2,7 +2,9 @@
     "count": 1,
     "is_package_config": true,
     "data_files": [
-        "tips.json"
+    ],
+    "remote_files": [
+        "https://gist.githubusercontent.com/deepns/909db3c52c319412a014a6025f676f05/raw/b28a2a6c3c62235c0c34686bd76dd2d26a7ae584/techtips.json"
     ],
     "tags": [
     ]
