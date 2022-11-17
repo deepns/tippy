@@ -1105,7 +1105,35 @@
                 "tar -jtvf file.tar.bz2 # list contents of tar.bz2 file",
                 "tar -tvf file.tar '*.cpp' # search for .cpp files in the archive"
             ]
+        },
+        {
+            "description": "Python - read contents pointed by a URL",
+            "tags":[
+                "python",
+                "programming"
+            ],
+            "contents":[
+                "# read contents of a link using requests",
+                "r = requests.get(\"https://someurl.com/somefile.json\")",
+                "# gets a response object",
+                "r.text # to read the contents as a text",
+                "r.json() # to return a json dict of the data pointed by the url"
+            ]
+        },
+        {
+            "description": "Python - validate a string is valid URL or not",
+            "tags":[
+                "python",
+                "programming",
+                "productivity"
+            ],
+            "contents":[
+                "# using validators package",
+                "import validators",
+                "# validators.url() returns true if the url is valid",
+                "is_url = validators.url(\"https://someurl.com\")"
+            ]
         }
     ],
-    "num_tips" : 75
+    "num_tips" : 77
 }
